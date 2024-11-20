@@ -58,18 +58,16 @@ public class JdbcDemo6 {
         
         System.out.println("Fruit Data:");
         while (rs.next()) {
-            String name = rs.getString("name");
-            String color = rs.getString("color");
-            System.out.println("Name: " + name + ", Color: " + color);
+            System.out.println(rs.getString("name") + " " + rs.getString("color"));
         }
         c.close();
     }
 
 	public static void main(String[] args) throws Exception {
 		JdbcDemo6 j1 = new JdbcDemo6();
-		j1.insertdata();
+		//j1.insertdata();
 //		j1.updatedata();
 //		j1.deletedata();
-//		j1.fetchdata();
+        j1.fetchdata();
 	}
 }
