@@ -17,7 +17,7 @@ public class JdbcDemo2 {
         s.executeUpdate("INSERT INTO animal VALUES('dog','black')");
         s.executeUpdate("delete from animal where name = 'lion'");
         s.executeUpdate("delete from animal where name = 'dog'");
-        s.executeUpdate("UPDATE animal SET color = 'brown' WHERE name = 'dog'");
+        s.executeUpdate("UPDATE animal SET color = 'brown' WHERE name = 'dog'");   
         
         
         System.out.println("Data inserted successfully.");
@@ -28,5 +28,6 @@ public class JdbcDemo2 {
 		
 
 	}
+	
 
 }
