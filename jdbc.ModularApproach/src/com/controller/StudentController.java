@@ -8,11 +8,11 @@ public class StudentController {
 		
 		StudentService s1 = new StudentService();
 		System.out.println("Controller executed successfullly..");
-//		s1.insertdata();
+		s1.insertdata();
 //		s1.createdata();
 //		s1.updatedata();
-		s1.fetchdata();
-		s1.deletedata();
+//		s1.fetchdata();
+//		s1.deletedata();
 		
 		System.out.println("Thank you!.........");
 	}

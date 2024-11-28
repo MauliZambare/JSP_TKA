@@ -23,7 +23,7 @@ public class StudentDao {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/batch1197", "root", "root");
 		Statement s = c.createStatement();
-		s.executeUpdate("INSERT INTO students (name, age) VALUES ('Tukaram', 23)");
+		s.executeUpdate("INSERT INTO students (name, age) VALUES ('vijay', 21)");
 		System.out.println("Data inserted successfully......");
 		s.close();
 		c.close();
