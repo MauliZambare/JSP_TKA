@@ -1,6 +1,6 @@
-package com.servlet;
+package com.servelet2;
 
-import java.io.IOException; 
+import java.io.IOException; // Missing import added
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -20,14 +20,20 @@ public class ServletDemo1 extends HttpServlet {
         String name = request.getParameter("name1");
         String email = request.getParameter("email1");
         String pass = request.getParameter("pass1");
-        System.out.println(name);
-        System.out.println(email);
-        System.out.println(pass);
 
+//        System.out.println(name);
+//        System.out.println(email);
+//        System.out.println(pass);
+//        
+//        PrintWriter out = response.getWriter();
+//        
+//        out.print(name);
+//        out.print(email);
+//        out.print(pass);
         
         try {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/batch1197","root","root");
+        Connection c = DriverManager.getConnection("jdbc://localhost:3306/batch1197","root","root");
         PreparedStatement ps = c.prepareStatement("insert into register(name,email,password)values(?,?,?)");
         ps.setString(1, name);
         ps.setString(2, email);
